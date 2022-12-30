@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Url shortener</title>
+</head>
+<body>
+    <center>
+    <h2>Add URL</h2>
+    </center>
+    <form method="post">
+        <p>Original link</p>
+        <p><input type="text" name="originallink"></p>
+        <p>Shortlink</p>
+        <p><input type="text" name="shortlink"></p>
+        <p><input type="submit" value="submit"></p>
+    </form>
+
+    <br>
+
+    
+    <center>
+        
+    <h3>All URLS</h2>
+
+    <table>
+        {% for key, value in data.items() %}
+
+        <tr onclick="window.location='{{value}}';">
+             <td>{{key}}</td> 
+            <td>{{value}}</td>
+        </tr>
+
+        {% endfor %}
+    </table>
+
+    </center>
+
+</body>
+</html>
+
+
+
