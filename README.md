@@ -1,4 +1,4 @@
-# URL shortener flask website
+# URL Shortener Flask Web App
 
 [Website 📲](https://urlshortener.aryanmehra.repl.co/)
 
